@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GD Imports | Perfumaria</title>
+<meta name="description" content="GD Imports - Encontre seu próximo perfume favorito.">
+<style>
+:root {
+  --gold: #c9a44c;
+  --black: #090909;
+  --card: #151515;
+  --white: #f7f3e9;
+  --muted: #aaa49a;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+}
+header {
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #302719;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.logo {
+  color: var(--gold);
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+.logo span { display: block; font-size: 10px; letter-spacing: 5px; }
+nav { display: flex; gap: 22px; }
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 14px;
+}
+nav a:hover { color: var(--gold); }
+
+.hero {
+  min-height: 420px;
+  padding: 90px 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(90deg, #090909 35%, #090909cc),
+  url("https://images.unsplash.com/photo-1594035910387-fea47794261f?w=1600")
+  center/cover;
+}
+.hero small {
+  color: var(--gold);
+  letter-spacing: 5px;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: clamp(38px, 6vw, 65px);
+  max-width: 650px;
+  margin-bottom: 18px;
+}
+.hero h1 span { color: var(--gold); }
+.hero p {
+  color: #ccc;
+  max-width: 480px;
+  line-height: 1.7;
+}
+.gold-button {
+  display: inline-block;
+  background: var(--gold);
+  color: #090909;
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 25px;
+  width: fit-content;
+  border-radius: 3px;
+}
+section { padding: 65px 7%; }
+.section-title { text-align: center; margin-bottom: 35px; }
+.section-title small { color: var(--gold); letter-spacing: 4px; }
+.section-title h2 { font-size: 32px; margin-top: 12px; }
+
+.search {
+  display: block;
+  width: min(500px, 100%);
+  margin: 0 auto 35px;
+  padding: 15px;
+  background: #171717;
+  border: 1px solid #514126;
+  color: white;
+  border-radius: 4px;
+  outline: none;
+}
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 25px;
+}
+.product {
+  background: var(--card);
+  border: 1px solid #29231a;
+  text-align: center;
+  padding-bottom: 22px;
+  transition: .3s;
+}
+.product:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+.product img {
+  width: 100%;
+  height: 245px;
+  object-fit: contain;
+  padding: 15px;
+  background: #101010;
+}
+.product h3 { margin: 18px 10px 8px; }
+.product p { color: var(--muted); font-size: 13px; }
+.price {
+  color: var(--gold);
+  font-size: 22px;
+  font-weight: bold;
+  margin: 16px 0;
+}
+.buy {
+  display: inline-block;
+  background: var(--gold);
+  color: #090909;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-weight: bold;
+  font-size: 13px;
+  border-radius: 3px;
+}
+.stock {
+  color: #75c58c;
+  font-size: 12px;
+  margin-top: 10px;
+}
+.empty {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 40px 10px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+.about {
+  background: #111;
+  text-align: center;
+}
+.about p {
+  color: #bbb;
+  max-width: 650px;
+  margin: 20px auto 0;
+  line-height: 1.9;
+}
+footer {
+  padding: 35px 7%;
+  text-align: center;
+  border-top: 1px solid #302719;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 2;
+}
+footer strong { color: var(--gold); }
+footer a { color: var(--gold); text-decoration: none; }
+@media(max-width:600px) {
+  header { justify-content: center; }
+  nav { justify-content: center; flex-wrap: wrap; gap: 15px; }
+  .hero { min-height: 350px; padding: 60px 7%; }
+  section { padding: 50px 5%; }
+}
+</style>
+</head>
+<body>
+
+<!-- CABEÇALHO -->
+<header>
+  <div class="logo">
+    GD IMPORTS
+    <span>PARFUMS</span>
+  </div>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#produtos">Perfumes</a>
+    <a href="#sobre">Sobre nós</a>
+    <a href="#contato">Contato</a>
+  </nav>
+</header>
+
+<!-- APRESENTAÇÃO -->
+<div class="hero" id="inicio">
+  <small>GD IMPORTS PARFUMS</small>
+  <h1>Sua essência.<br><span>Sua identidade.</span></h1>
+  <p>Descubra fragrâncias que marcam presença.
+  Encontre seu próximo perfume favorito na GD Imports.</p>
+  <a href="#produtos" class="gold-button">VER PRODUTOS</a>
+</div>
+
+<!-- PRODUTOS -->
+<section id="produtos">
+  <div class="section-title">
+    <small>NOSSO CATÁLOGO</small>
+    <h2>Perfumes disponíveis</h2>
+  </div>
+
+  <input
+    class="search"
+    id="search"
+    type="text"
+    placeholder="Pesquisar perfume..."
+    oninput="mostrarProdutos()"
+  >
+
+  <div class="products" id="products"></div>
+</section>
+
+<!-- SOBRE -->
+<section class="about" id="sobre">
+  <div class="section-title">
+    <small>QUEM SOMOS</small>
+    <h2>GD Imports</h2>
+  </div>
+  <p>
+    Bem-vindo à GD Imports! Trabalhamos com fragrâncias
+    selecionadas para quem valoriza qualidade, personalidade
+    e sofisticação. Escolha seu favorito e fale diretamente
+    com a nossa equipe.
+  </p>
+</section>
+
+<!-- RODAPÉ -->
+<footer id="contato">
+  <strong>GD IMPORTS PARFUMS</strong>
+  <p>Sua essência, sua identidade.</p>
+  <p>
+    Instagram:
+    <a href="https://instagram.com/gdimports.parfums"
+       target="_blank">@gdimports.parfums</a>
+  </p>
+  <p>© 2026 GD Imports. Todos os direitos reservados.</p>
+</footer>
+
+<script>
+
+// =====================================
+// CONFIGURAÇÕES DA SUA LOJA
+// =====================================
+
+// Coloque seu WhatsApp com DDD e país.
+// Exemplo: 5511999999999
+const WHATSAPP = "5511999999999";
+
+// CADASTRE SEUS PERFUMES AQUI:
+const perfumes = [
+
+  /*
+  MODELO PARA ADICIONAR PRODUTOS:
+
+  {
+    nome: "Nome do perfume",
+    tipo: "Perfume masculino",
+    preco: 199.90,
+    imagem: "imagens/perfume.jpg",
+    estoque: true
+  },
+
+  */
+
+];
+
+function mostrarProdutos() {
+  const area = document.getElementById("products");
+  const busca = document.getElementById("search").value.toLowerCase();
+
+  const encontrados = perfumes.filter(p =>
+    p.nome.toLowerCase().includes(busca) ||
+    p.tipo.toLowerCase().includes(busca)
+  );
+
+  if (encontrados.length === 0) {
+    area.innerHTML = `
+      <div class="empty">
+        <h3>Nenhum perfume encontrado.</h3>
+        <p>Em breve teremos novidades por aqui!</p>
+      </div>`;
+    return;
+  }
+
+  area.innerHTML = encontrados.map(p => `
+    <div class="product">
+      <img src="${p.imagem}" alt="${p.nome}"
+           onerror="this.style.display='none'">
+      <h3>${p.nome}</h3>
+      <p>${p.tipo}</p>
+      <div class="price">
+        R$ ${Number(p.preco).toFixed(2).replace(".", ",")}
+      </div>
+      <div class="stock">
+        ${p.estoque ? "● Disponível em estoque" : "● Esgotado"}
+      </div>
+      ${p.estoque ? `
+        <a class="buy"
+           href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
+             "Olá! Tenho interesse no perfume " + p.nome
+           )}"
+           target="_blank">
+           COMPRAR PELO WHATSAPP
+        </a>` : ""}
+    </div>
+  `).join("");
+}
+
+mostrarProdutos();
+
+</script>
+</body>
+</html>
