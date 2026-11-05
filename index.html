@@ -3,321 +3,271 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GD Imports | Perfumaria</title>
-<meta name="description" content="GD Imports - Encontre seu próximo perfume favorito.">
+<meta name="theme-color" content="#090909">
+<title>GD Imports Parfums | Catálogo</title>
 <style>
-:root {
-  --gold: #c9a44c;
-  --black: #090909;
-  --card: #151515;
-  --white: #f7f3e9;
-  --muted: #aaa49a;
-}
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body {
-  background: var(--black);
-  color: var(--white);
-  font-family: Arial, sans-serif;
-}
-header {
-  padding: 22px 7%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #302719;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-.logo {
-  color: var(--gold);
-  font-size: 27px;
-  font-weight: bold;
-  letter-spacing: 3px;
-}
-.logo span { display: block; font-size: 10px; letter-spacing: 5px; }
-nav { display: flex; gap: 22px; }
-nav a {
-  color: var(--white);
-  text-decoration: none;
-  font-size: 14px;
-}
-nav a:hover { color: var(--gold); }
-
-.hero {
-  min-height: 420px;
-  padding: 90px 8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background: linear-gradient(90deg, #090909 35%, #090909cc),
-  url("https://images.unsplash.com/photo-1594035910387-fea47794261f?w=1600")
-  center/cover;
-}
-.hero small {
-  color: var(--gold);
-  letter-spacing: 5px;
-  margin-bottom: 20px;
-}
-.hero h1 {
-  font-size: clamp(38px, 6vw, 65px);
-  max-width: 650px;
-  margin-bottom: 18px;
-}
-.hero h1 span { color: var(--gold); }
-.hero p {
-  color: #ccc;
-  max-width: 480px;
-  line-height: 1.7;
-}
-.gold-button {
-  display: inline-block;
-  background: var(--gold);
-  color: #090909;
-  padding: 15px 25px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 25px;
-  width: fit-content;
-  border-radius: 3px;
-}
-section { padding: 65px 7%; }
-.section-title { text-align: center; margin-bottom: 35px; }
-.section-title small { color: var(--gold); letter-spacing: 4px; }
-.section-title h2 { font-size: 32px; margin-top: 12px; }
-
-.search {
-  display: block;
-  width: min(500px, 100%);
-  margin: 0 auto 35px;
-  padding: 15px;
-  background: #171717;
-  border: 1px solid #514126;
-  color: white;
-  border-radius: 4px;
-  outline: none;
-}
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  gap: 25px;
-}
-.product {
-  background: var(--card);
-  border: 1px solid #29231a;
-  text-align: center;
-  padding-bottom: 22px;
-  transition: .3s;
-}
-.product:hover {
-  transform: translateY(-5px);
-  border-color: var(--gold);
-}
-.product img {
-  width: 100%;
-  height: 245px;
-  object-fit: contain;
-  padding: 15px;
-  background: #101010;
-}
-.product h3 { margin: 18px 10px 8px; }
-.product p { color: var(--muted); font-size: 13px; }
-.price {
-  color: var(--gold);
-  font-size: 22px;
-  font-weight: bold;
-  margin: 16px 0;
-}
-.buy {
-  display: inline-block;
-  background: var(--gold);
-  color: #090909;
-  text-decoration: none;
-  padding: 12px 20px;
-  font-weight: bold;
-  font-size: 13px;
-  border-radius: 3px;
-}
-.stock {
-  color: #75c58c;
-  font-size: 12px;
-  margin-top: 10px;
-}
-.empty {
-  grid-column: 1/-1;
-  text-align: center;
-  padding: 40px 10px;
-  color: var(--muted);
-  line-height: 1.8;
-}
-.about {
-  background: #111;
-  text-align: center;
-}
-.about p {
-  color: #bbb;
-  max-width: 650px;
-  margin: 20px auto 0;
-  line-height: 1.9;
-}
-footer {
-  padding: 35px 7%;
-  text-align: center;
-  border-top: 1px solid #302719;
-  color: var(--muted);
-  font-size: 13px;
-  line-height: 2;
-}
-footer strong { color: var(--gold); }
-footer a { color: var(--gold); text-decoration: none; }
-@media(max-width:600px) {
-  header { justify-content: center; }
-  nav { justify-content: center; flex-wrap: wrap; gap: 15px; }
-  .hero { min-height: 350px; padding: 60px 7%; }
-  section { padding: 50px 5%; }
-}
+:root{--gold:#d7b46a;--gold2:#f2d99b;--bg:#090909;--panel:#151515;--muted:#aaa}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#f7f3e9;font-family:Arial,Helvetica,sans-serif}
+header{padding:28px 18px 22px;text-align:center;background:radial-gradient(ellipse at top,#3a2b12 0%,#111 48%,#090909 100%);border-bottom:1px solid #493817}
+.logo{font-family:Georgia,serif;font-size:clamp(30px,7vw,54px);letter-spacing:3px;color:var(--gold2);margin:8px 0}
+.sub{letter-spacing:4px;color:#d6c49a;font-size:11px;text-transform:uppercase}
+header p{color:#d0c8b8;margin:15px auto 0;max-width:540px;line-height:1.5;font-size:14px}
+nav{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;padding:13px;background:#101010;border-bottom:1px solid #292319}
+nav a{color:var(--gold2);text-decoration:none;font-size:13px}
+main{max-width:1200px;margin:auto;padding:24px 16px 60px}
+.section-title{font-family:Georgia,serif;color:var(--gold2);font-size:27px;margin:12px 0 6px}
+.intro{color:var(--muted);font-size:13px;margin:0 0 20px;line-height:1.5}
+.controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:9px;margin:18px 0 22px}
+input,select{width:100%;padding:12px;background:#171717;color:#f7f3e9;border:1px solid #514327;border-radius:8px;outline:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:14px}
+.card{background:linear-gradient(150deg,#1b1b1b,#101010);border:1px solid #332b1b;border-radius:12px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.photo{width:100%;aspect-ratio:3/4;object-fit:cover;background:#222}
+.info{padding:12px;display:flex;flex-direction:column;gap:7px;flex:1}
+.name{font-weight:700;font-size:14px;line-height:1.3;color:#fff}
+.meta{font-size:11px;color:#b8ad98}
+.price{font-weight:bold;color:var(--gold2);font-size:17px;margin-top:2px}
+.tag{font-size:10px;color:#e7d4a5;border:1px solid #66532d;border-radius:20px;padding:4px 8px;width:max-content}
+.buy{display:block;text-align:center;text-decoration:none;background:linear-gradient(90deg,#9d7937,#e3c47b);color:#17120a;font-weight:bold;padding:10px;border-radius:7px;margin-top:auto;font-size:12px}
+.empty{color:#aaa;padding:25px;text-align:center;grid-column:1/-1}
+.notice{border:1px solid #574627;background:#17140e;color:#d7c69e;padding:12px;border-radius:9px;font-size:12px;line-height:1.5;margin:18px 0}
+footer{text-align:center;padding:28px 16px;border-top:1px solid #392e1a;color:#a99d86;font-size:12px}
+footer strong{color:var(--gold2)}
+@media(min-width:800px){main{padding-left:24px;padding-right:24px}.grid{grid-template-columns:repeat(auto-fill,minmax(210px,1fr))}}
 </style>
 </head>
 <body>
-
-<!-- CABEÇALHO -->
 <header>
-  <div class="logo">
-    GD IMPORTS
-    <span>PARFUMS</span>
-  </div>
-  <nav>
-    <a href="#inicio">Início</a>
-    <a href="#produtos">Perfumes</a>
-    <a href="#sobre">Sobre nós</a>
-    <a href="#contato">Contato</a>
-  </nav>
+  <div class="sub">Essências que marcam</div>
+  <div class="logo">GD IMPORTS</div>
+  <div class="sub">PARFUMS</div>
+  <p>Perfumes, body splash e fragrâncias especiais. Encontre sua próxima essência favorita.</p>
 </header>
 
-<!-- APRESENTAÇÃO -->
-<div class="hero" id="inicio">
-  <small>GD IMPORTS PARFUMS</small>
-  <h1>Sua essência.<br><span>Sua identidade.</span></h1>
-  <p>Descubra fragrâncias que marcam presença.
-  Encontre seu próximo perfume favorito na GD Imports.</p>
-  <a href="#produtos" class="gold-button">VER PRODUTOS</a>
+<nav>
+<a href="#estoque">Em estoque</a>
+<a href="#encomenda">Sob encomenda</a>
+<a href="#contato">Contato</a>
+</nav>
+
+<main>
+<section id="estoque">
+<h1 class="section-title">Catálogo disponível</h1>
+<p class="intro">Produtos identificados no catálogo enviado. Consulte a disponibilidade antes de finalizar seu pedido.</p>
+
+<div class="controls">
+<input id="searchStock" type="search" placeholder="Buscar perfume...">
+<select id="catStock">
+<option value="">Todas as categorias</option>
+<option>Perfume árabe</option>
+<option>Perfume</option>
+<option>Body splash</option>
+<option>Loção corporal</option>
+<option>Kit árabe</option>
+</select>
+<select id="genderStock">
+<option value="">Todos os públicos</option>
+<option>Feminino</option>
+<option>Masculino</option>
+<option>Unissex</option>
+</select>
+<select id="scentStock">
+<option value="">Todas as famílias</option>
+<option>cítrico</option>
+<option>amadeirado</option>
+<option>floral</option>
+<option>doce</option>
+<option>oriental</option>
+<option>frutado</option>
+</select>
 </div>
-
-<!-- PRODUTOS -->
-<section id="produtos">
-  <div class="section-title">
-    <small>NOSSO CATÁLOGO</small>
-    <h2>Perfumes disponíveis</h2>
-  </div>
-
-  <input
-    class="search"
-    id="search"
-    type="text"
-    placeholder="Pesquisar perfume..."
-    oninput="mostrarProdutos()"
-  >
-
-  <div class="products" id="products"></div>
+<div class="grid" id="stockGrid"></div>
 </section>
 
-<!-- SOBRE -->
-<section class="about" id="sobre">
-  <div class="section-title">
-    <small>QUEM SOMOS</small>
-    <h2>GD Imports</h2>
-  </div>
-  <p>
-    Bem-vindo à GD Imports! Trabalhamos com fragrâncias
-    selecionadas para quem valoriza qualidade, personalidade
-    e sofisticação. Escolha seu favorito e fale diretamente
-    com a nossa equipe.
-  </p>
+<section id="encomenda" style="margin-top:46px">
+<h2 class="section-title">Perfumes árabes sob encomenda</h2>
+<p class="intro">Seleção de fragrâncias para encomenda. Valores exibidos são estimativas iniciais e devem ser confirmados antes da compra.</p>
+
+<div class="controls">
+<input id="searchOrder" type="search" placeholder="Buscar na seleção...">
+<select id="genderOrder">
+<option value="">Todos os públicos</option>
+<option>Feminino</option>
+<option>Masculino</option>
+<option>Unissex</option>
+</select>
+<select id="scentOrder">
+<option value="">Todas as famílias</option>
+<option>cítrico</option>
+<option>amadeirado</option>
+<option>floral</option>
+<option>doce</option>
+<option>oriental</option>
+<option>frutado</option>
+</select>
+</div>
+<div class="grid" id="orderGrid"></div>
+<div class="notice">Os preços da seção “sob encomenda” são referências estimadas para apresentação do catálogo, não cotações confirmadas de fornecedores. Confirme preço, prazo e disponibilidade pelo WhatsApp.</div>
 </section>
 
-<!-- RODAPÉ -->
-<footer id="contato">
-  <strong>GD IMPORTS PARFUMS</strong>
-  <p>Sua essência, sua identidade.</p>
-  <p>
-    Instagram:
-    <a href="https://instagram.com/gdimports.parfums"
-       target="_blank">@gdimports.parfums</a>
-  </p>
-  <p>© 2026 GD Imports. Todos os direitos reservados.</p>
-</footer>
+<section id="contato" style="margin-top:38px">
+<h2 class="section-title">Faça seu pedido</h2>
+<p class="intro">Chame a GD Imports Parfums para consultar disponibilidade, prazo de encomenda e formas de pagamento.</p>
+<a class="buy" style="max-width:360px" id="contactLink" href="#" target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+<div class="notice">Antes de publicar, substitua o número de WhatsApp de demonstração no código pelo número oficial da loja.</div>
+</section>
+</main>
 
-<script>
+<footer>
+<strong>GD Imports Parfums</strong><br>
+Seu estilo, sua essência.
+</footer><script>
+const WHATSAPP = "5511950448650";
+// TROQUE pelo número oficial: 55 + DDD + número, somente dígitos.
 
-// =====================================
-// CONFIGURAÇÕES DA SUA LOJA
-// =====================================
-
-// Coloque seu WhatsApp com DDD e país.
-// Exemplo: 5511999999999
-const WHATSAPP = "5511999999999";
-
-// CADASTRE SEUS PERFUMES AQUI:
-const perfumes = [
-
-  /*
-  MODELO PARA ADICIONAR PRODUTOS:
-
-  {
-    nome: "Nome do perfume",
-    tipo: "Perfume masculino",
-    preco: 199.90,
-    imagem: "imagens/perfume.jpg",
-    estoque: true
-  },
-
-  */
-
+const stock = [
+{"name":"Lara Pink Body Splash","category":"Body splash","gender":"Feminino","scent":"floral","price":"R$ 130,00","image":"images/produto-01.jpg","status":"Em estoque"},
+{"name":"Bare Vanilla Joy Body Splash","category":"Body splash","gender":"Feminino","scent":"doce","price":"Consulte no WhatsApp","image":"images/produto-02.jpg","status":"Em estoque"},
+{"name":"Amber Rouge Body Splash","category":"Body splash","gender":"Unissex","scent":"oriental","price":"R$ 130,00","image":"images/produto-03.jpg","status":"Em estoque"},
+{"name":"Sabah Al Ward","category":"Perfume árabe","gender":"Feminino","scent":"floral","price":"Consulte no WhatsApp","image":"images/produto-04.jpg","status":"Em estoque"},
+{"name":"Ameerati","category":"Perfume árabe","gender":"Feminino","scent":"oriental","price":"Consulte no WhatsApp","image":"images/produto-05.jpg","status":"Em estoque"},
+{"name":"Asad Body Splash","category":"Body splash","gender":"Masculino","scent":"amadeirado","price":"R$ 130,00","image":"images/produto-06.jpg","status":"Em estoque"},
+{"name":"Lara Rosa Body Splash","category":"Body splash","gender":"Feminino","scent":"floral","price":"Consulte no WhatsApp","image":"images/produto-07.jpg","status":"Em estoque"},
+{"name":"Watani","category":"Perfume árabe","gender":"Masculino","scent":"amadeirado","price":"R$ 250,00","image":"images/produto-08.jpg","status":"Em estoque"},
+{"name":"Shagaf Al Ward","category":"Perfume árabe","gender":"Feminino","scent":"floral","price":"R$ 300,00","image":"images/produto-09.jpg","status":"Em estoque"},
+{"name":"Sabah Sugar","category":"Perfume árabe","gender":"Feminino","scent":"doce","price":"R$ 280,00","image":"images/produto-10.jpg","status":"Em estoque"},
+{"name":"Scuderia Ferrari Red","category":"Perfume","gender":"Masculino","scent":"cítrico","price":"R$ 380,00","image":"images/produto-11.jpg","status":"Em estoque"},
+{"name":"Badee Al Oud Collection Kit","category":"Kit árabe","gender":"Unissex","scent":"oriental","price":"Consulte no WhatsApp","image":"images/produto-12.jpg","status":"Em estoque"},
+{"name":"Parfum de Muse Aquila","category":"Perfume","gender":"Unissex","scent":"oriental","price":"R$ 250,00","image":"images/produto-13.jpg","status":"Em estoque"},
+{"name":"Club de Nuit Azhar Body Splash","category":"Body splash","gender":"Feminino","scent":"floral","price":"R$ 130,00","image":"images/produto-14.jpg","status":"Em estoque"},
+{"name":"Sabah Al Ward Body Splash","category":"Body splash","gender":"Feminino","scent":"floral","price":"R$ 130,00","image":"images/produto-15.jpg","status":"Em estoque"},
+{"name":"Pure Seduction Body Lotion","category":"Loção corporal","gender":"Feminino","scent":"doce","price":"R$ 140,00","image":"images/produto-16.jpg","status":"Em estoque"},
+{"name":"Summer Forever","category":"Perfume","gender":"Feminino","scent":"frutado","price":"R$ 110,00","image":"images/produto-17.jpg","status":"Em estoque"},
+{"name":"Reyna","category":"Perfume","gender":"Feminino","scent":"floral","price":"Consulte no WhatsApp","image":"images/produto-18.jpg","status":"Em estoque"},
+{"name":"Vanilla Cloud Bliss Body Splash","category":"Body splash","gender":"Feminino","scent":"doce","price":"R$ 120,00","image":"images/produto-19.jpg","status":"Em estoque"},
+{"name":"Ferrari Black","category":"Perfume","gender":"Masculino","scent":"amadeirado","price":"R$ 350,00","image":"images/produto-20.jpg","status":"Em estoque"},
+{"name":"Joop Homme","category":"Perfume","gender":"Masculino","scent":"oriental","price":"Consulte no WhatsApp","image":"images/produto-21.jpg","status":"Em estoque"},
+{"name":"Liquid Brun Body Splash","category":"Body splash","gender":"Masculino","scent":"amadeirado","price":"R$ 130,00","image":"images/produto-22.jpg","status":"Em estoque"}
 ];
 
-function mostrarProdutos() {
-  const area = document.getElementById("products");
-  const busca = document.getElementById("search").value.toLowerCase();
+const preorder = [
+{"name":"Lattafa Yara","gender":"Feminino","scent":"doce","price":"R$ 240,00"},
+{"name":"Lattafa Yara Moi","gender":"Feminino","scent":"floral","price":"R$ 260,00"},
+{"name":"Lattafa Yara Tous","gender":"Feminino","scent":"frutado","price":"R$ 260,00"},
+{"name":"Lattafa Asad","gender":"Masculino","scent":"amadeirado","price":"R$ 260,00"},
+{"name":"Lattafa Asad Bourbon","gender":"Masculino","scent":"amadeirado","price":"R$ 300,00"},
+{"name":"Lattafa Fakhar Rose","gender":"Feminino","scent":"floral","price":"R$ 240,00"},
+{"name":"Lattafa Fakhar Black","gender":"Masculino","scent":"amadeirado","price":"R$ 280,00"},
+{"name":"Lattafa Khamrah","gender":"Unissex","scent":"doce","price":"R$ 320,00"},
+{"name":"Lattafa Khamrah Qahwa","gender":"Unissex","scent":"oriental","price":"R$ 340,00"},
+{"name":"Lattafa Eclaire","gender":"Feminino","scent":"doce","price":"R$ 300,00"},
+{"name":"Bade'e Al Oud Oud for Glory","gender":"Unissex","scent":"oriental","price":"R$ 280,00"},
+{"name":"Bade'e Al Oud Honor & Glory","gender":"Unissex","scent":"doce","price":"R$ 300,00"},
+{"name":"Ameer Al Oudh Intense Oud","gender":"Unissex","scent":"amadeirado","price":"R$ 260,00"},
+{"name":"Armaf Club de Nuit Intense Man","gender":"Masculino","scent":"cítrico","price":"R$ 360,00"},
+{"name":"Armaf Club de Nuit Woman","gender":"Feminino","scent":"floral","price":"R$ 340,00"},
+{"name":"Armaf Club de Nuit Iconic","gender":"Masculino","scent":"amadeirado","price":"R$ 420,00"},
+{"name":"Maison Alhambra Delilah","gender":"Feminino","scent":"floral","price":"R$ 300,00"},
+{"name":"Maison Alhambra Salvo","gender":"Masculino","scent":"amadeirado","price":"R$ 280,00"},
+{"name":"Al Wataniah Durrat Al Aroos","gender":"Feminino","scent":"doce","price":"R$ 220,00"},
+{"name":"Al Wataniah Attar Al Wesal","gender":"Unissex","scent":"oriental","price":"R$ 260,00"},
+{"name":"Kayaan Classic","gender":"Masculino","scent":"amadeirado","price":"R$ 280,00"},
+{"name":"Lattafa Mayar","gender":"Feminino","scent":"frutado","price":"R$ 260,00"},
+{"name":"Lattafa Haya","gender":"Feminino","scent":"floral","price":"R$ 300,00"},
+{"name":"Lattafa Nebras","gender":"Unissex","scent":"doce","price":"R$ 320,00"}
+];
 
-  const encontrados = perfumes.filter(p =>
-    p.nome.toLowerCase().includes(busca) ||
-    p.tipo.toLowerCase().includes(busca)
-  );
-
-  if (encontrados.length === 0) {
-    area.innerHTML = `
-      <div class="empty">
-        <h3>Nenhum perfume encontrado.</h3>
-        <p>Em breve teremos novidades por aqui!</p>
-      </div>`;
-    return;
-  }
-
-  area.innerHTML = encontrados.map(p => `
-    <div class="product">
-      <img src="${p.imagem}" alt="${p.nome}"
-           onerror="this.style.display='none'">
-      <h3>${p.nome}</h3>
-      <p>${p.tipo}</p>
-      <div class="price">
-        R$ ${Number(p.preco).toFixed(2).replace(".", ",")}
-      </div>
-      <div class="stock">
-        ${p.estoque ? "● Disponível em estoque" : "● Esgotado"}
-      </div>
-      ${p.estoque ? `
-        <a class="buy"
-           href="https://wa.me/${WHATSAPP}?text=${encodeURIComponent(
-             "Olá! Tenho interesse no perfume " + p.nome
-           )}"
-           target="_blank">
-           COMPRAR PELO WHATSAPP
-        </a>` : ""}
-    </div>
-  `).join("");
+function waLink(name){
+return "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent("Olá! Tenho interesse em "+name+". Pode me passar mais informações?");
 }
 
-mostrarProdutos();
+document.getElementById("contactLink").href=waLink("conhecer o catálogo");
 
+function card(p,withImage){
+const article=document.createElement("article");
+article.className="card";
+
+if(withImage){
+const img=document.createElement("img");
+img.className="photo";
+img.src=p.image;
+img.alt=p.name;
+img.loading="lazy";
+article.appendChild(img);
+}
+
+const info=document.createElement("div");
+info.className="info";
+
+info.innerHTML='<div class="tag">'+p.status+'</div><div class="name"></div><div class="meta"></div><div class="price"></div><a class="buy" target="_blank" rel="noopener">Consultar / pedir</a>';
+
+info.querySelector(".name").textContent=p.name;
+info.querySelector(".meta").textContent=p.category+" • "+p.gender+" • "+p.scent;
+info.querySelector(".price").textContent=p.price;
+info.querySelector("a").href=waLink(p.name);
+
+article.appendChild(info);
+return article;
+}
+
+function renderStock(){
+const q=document.getElementById("searchStock").value.toLowerCase();
+const c=document.getElementById("catStock").value;
+const g=document.getElementById("genderStock").value;
+const s=document.getElementById("scentStock").value;
+
+const list=stock.filter(p=>
+p.name.toLowerCase().includes(q)&&
+(!c||p.category===c)&&
+(!g||p.gender===g)&&
+(!s||p.scent===s)
+);
+
+const grid=document.getElementById("stockGrid");
+grid.innerHTML="";
+
+if(!list.length){
+grid.innerHTML='<div class="empty">Nenhum produto encontrado.</div>';
+return;
+}
+
+list.forEach(p=>grid.appendChild(card(p,true)));
+}
+
+function renderOrder(){
+const q=document.getElementById("searchOrder").value.toLowerCase();
+const g=document.getElementById("genderOrder").value;
+const s=document.getElementById("scentOrder").value;
+
+const list=preorder.filter(p=>
+p.name.toLowerCase().includes(q)&&
+(!g||p.gender===g)&&
+(!s||p.scent===s)
+);
+
+const grid=document.getElementById("orderGrid");
+grid.innerHTML="";
+
+if(!list.length){
+grid.innerHTML='<div class="empty">Nenhum perfume encontrado.</div>';
+return;
+}
+
+list.forEach(p=>grid.appendChild(card({
+...p,
+category:"Perfume árabe",
+status:"Sob encomenda"
+},false)));
+}
+
+["searchStock","catStock","genderStock","scentStock"]
+.forEach(id=>document.getElementById(id).addEventListener("input",renderStock));
+
+["searchOrder","genderOrder","scentOrder"]
+.forEach(id=>document.getElementById(id).addEventListener("input",renderOrder));
+
+renderStock();
+renderOrder();
 </script>
 </body>
 </html>
